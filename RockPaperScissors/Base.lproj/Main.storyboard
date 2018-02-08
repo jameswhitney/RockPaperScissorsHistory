@@ -63,6 +63,9 @@
                                 <rect key="frame" x="162" y="77" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="617-Ia-x2S" kind="modal" identifier="historySegue" id="PCb-qG-AfD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,6 +179,6 @@
         <image name="scissors" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ih9-HG-qHO"/>
+        <segue reference="VKf-O8-YvW"/>
     </inferredMetricsTieBreakers>
 </document>

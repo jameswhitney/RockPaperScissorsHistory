@@ -11,4 +11,6 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     
+    var history: [RPSMatch]!
+    
 }

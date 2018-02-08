@@ -45,10 +45,6 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    @IBAction func showHistory(_ sender: AnyObject) {
-        //TODO: Present HistoryViewController
-    }
-    
     // MARK: Play!
     
     func throwDown(_ playersMove: RPS) {
@@ -87,7 +83,14 @@ class RockPaperScissorsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Notice that this code works for both Scissors and Paper
-        let controller = segue.destination as! ResultViewController
-        controller.match = self.match
+        if segue.identifier == "historySegue" {
+            let controller = segue.destination as! HistoryViewController
+            controller.history = self.history
+            print("HistoryVC Presented")
+        } else {
+            let controller = segue.destination as! ResultViewController
+            controller.match = self.match
+        }
     }
 }
+
