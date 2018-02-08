@@ -81,13 +81,15 @@ class RockPaperScissorsViewController: UIViewController {
 
     // MARK: Segue
     
+    // Determine which view to present
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Notice that this code works for both Scissors and Paper
+        // Present HistoryViewController.
         if segue.identifier == "historySegue" {
             let controller = segue.destination as! HistoryViewController
             controller.history = self.history
-            print("HistoryVC Presented")
+            // Present ResultViewController
         } else {
+            //Notice that this code works for both Scissors and Paper
             let controller = segue.destination as! ResultViewController
             controller.match = self.match
         }
