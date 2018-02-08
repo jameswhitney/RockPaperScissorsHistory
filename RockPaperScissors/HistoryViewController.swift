@@ -43,6 +43,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
+    @IBAction func dismissHistory(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
 
