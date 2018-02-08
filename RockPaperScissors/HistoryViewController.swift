@@ -16,11 +16,30 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return history.count
+    }
+    
+    func matchDescription(_ match: RPSMatch) -> String {
+        
+        if (match.p1 == match.p2) {
+            return "Tie"
+        } else if (match.p1.defeats(match.p2)) {
+            return "Win"
+        } else {
+            return "Loss"
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let CellID = "historyCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID, for: indexPath)
+        let match = self.history[(indexPath as NSIndexPath).row]
+        
+        cell.textLabel!.text = matchDescription(match)
+        cell.detailTextLabel!.text = "\(match.p1) vs \(match.p2)"
+        
+        return cell
     }
     
 
