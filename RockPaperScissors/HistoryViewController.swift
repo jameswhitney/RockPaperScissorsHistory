@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var history: [RPSMatch]!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
@@ -19,7 +24,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
-    var history: [RPSMatch]!
+    
     
 
     
