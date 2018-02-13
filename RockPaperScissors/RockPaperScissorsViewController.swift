@@ -67,7 +67,8 @@ class RockPaperScissorsViewController: UIViewController {
         
             // Communicate the match
             resultVC.match = self.match
-            self.present(resultVC, animated: true, completion: nil)
+            // Add navigation controller to result view when rock is thrown
+            self.navigationController?.pushViewController(resultVC, animated: true)
         }
         
         // 2nd Way: Code plus Segue
